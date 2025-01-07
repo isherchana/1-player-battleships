@@ -1,0 +1,25 @@
+#battleships
+x = [5,4,3]
+x2 = [6,5,4]
+y = [1,1,1]
+y2 =[2,2,2]
+two_players = int(input("Is there 1 player?: "))
+
+if two_players == 1:
+    while x != [] and y != [] or x2 != [] and y2 != [] :
+        ask_x = int(input("Enter a number for the x co-ordinate: "))
+        ask_y = int(input("Enter a number for the y co-ordinate: "))
+
+        if ask_x in x and ask_y in y:
+            print("hit!")
+            x.remove(ask_x)
+            y.remove(ask_y)
+
+        elif ask_x in x2 and ask_y in y2:
+            print("hit!")
+            x2.remove(ask_x)
+            y2.remove(ask_y)
+        else:
+            print("Miss")
+
+    print("You completed the game.")
